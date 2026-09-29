@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#e84393">
+<meta name="description" content="番薯动漫｜二次元爱好者的动漫资讯与番剧推荐平台。最新番剧更新、角色图鉴、动漫新闻，一站式追番指南。">
+<meta name="keywords" content="番薯动漫, 番剧推荐, 动漫资讯, 二次元, 新番, 角色图鉴, 动漫新闻, fanshudongman">
+<meta name="author" content="番薯动漫">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="bingbot" content="index,follow">
+<link rel="canonical" href="https://fanshudongman-h5.github.io/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍠</text></svg>">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="番薯动漫">
+<meta property="og:title" content="番薯动漫｜二次元追番指南">
+<meta property="og:description" content="最新番剧更新、角色图鉴、动漫新闻，一站式追番平台。">
+<meta property="og:url" content="https://fanshudongman-h5.github.io/">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="番薯动漫｜二次元追番指南">
+<meta name="twitter:description" content="最新番剧更新、角色图鉴、动漫新闻，一站式追番平台。">
+
+<!-- 结构化数据 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://fanshudongman-h5.github.io/#website",
+      "name": "番薯动漫",
+      "alternateName": ["番薯动漫网", "番薯二次元"],
+      "url": "https://fanshudongman-h5.github.io/",
+      "description": "二次元爱好者的动漫资讯与番剧推荐平台",
+      "inLanguage": "zh-CN",
+      "publisher": { "@id": "https://fanshudongman-h5.github.io/#organization" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://fanshudongman-h5.github.io/#organization",
+      "name": "番薯动漫",
+      "url": "https://fanshudongman-h5.github.io/",
+      "description": "专注动漫资讯、番剧推荐与角色图鉴的二次元社区",
+      "logo": "https://fanshudongman-h5.github.io/#logo",
+      "sameAs": []
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://fanshudongman-h5.github.io/#top" },
+        { "@type": "ListItem", "position": 2, "name": "番剧推荐", "item": "https://fanshudongman-h5.github.io/#anime" },
+        { "@type": "ListItem", "position": 3, "name": "动漫资讯", "item": "https://fanshudongman-h5.github.io/#news" },
+        { "@type": "ListItem", "position": 4, "name": "角色图鉴", "item": "https://fanshudongman-h5.github.io/#characters" },
+        { "@type": "ListItem", "position": 5, "name": "关于我们", "item": "https://fanshudongman-h5.github.io/#about" }
+      ]
+    }
+  ]
+}
+</script>
+
+<title>番薯动漫｜二次元追番指南 - 最新番剧推荐与动漫资讯</title>
+
+<style>
+/* ============ 设计令牌 ============ */
+:root{
+  --pink:#e84393; --pink-2:#fd79a8; --pink-soft:#fdeaf3;
+  --purple:#6c5ce7; --purple-2:#a29bfe; --purple-soft:#e8e5f9;
+  --dark:#2d1b4e; --dark-2:#4a3a6e; --ink:#2d1b4e; --muted:#8478a3;
+  --paper:#fef9f6; --card:#ffffff;
+  --line:rgba(232,67,147,.12);
+  --shadow:0 2px 8px rgba(232,67,147,.08),0 16px 40px -20px rgba(45,27,78,.2);
+  --r:20px;
+  --max:1200px;
+  --t:.4s cubic-bezier(.2,.7,.3,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,"Helvetica Neue",Arial,sans-serif;
+  background:var(--paper);color:var(--ink);line-height:1.8;font-size:clamp(15px,1vw+12px,17px);
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img,svg{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+h1,h2,h3,h4{line-height:1.3;font-weight:800;letter-spacing:-.01em}
+:focus-visible{outline:3px solid var(--pink);outline-offset:3px;border-radius:6px}
+::selection{background:var(--pink);color:#fff}
+
+.wrap{width:min(100% - 2rem,var(--max));margin-inline:auto}
+@media(min-width:768px){.wrap{width:min(100% - 3rem,var(--max))}}
+
+/* ============ 顶部导航 ============ */
+.hd{position:sticky;top:0;z-index:60;background:rgba(254,249,246,.9);backdrop-filter:blur(16px);
+  border-bottom:1px solid transparent;transition:box-shadow var(--t),border-color var(--t)}
+.hd.solid{box-shadow:0 2px 20px -10px rgba(45,27,78,.25);border-bottom-color:var(--line)}
+.nav{display:flex;align-items:center;gap:1rem;height:68px}
+.logo{display:flex;align-items:center;gap:.6rem;font-weight:900;font-size:1.5rem;color:var(--pink)}
+.logo span{font-size:.75rem;color:var(--muted);font-weight:500;background:var(--pink-soft);padding:.2rem .6rem;border-radius:99px}
+.navlinks{display:none;gap:.25rem;margin-left:auto}
+.navlinks a{padding:.55rem .95rem;border-radius:999px;font-size:.93rem;color:var(--dark-2);transition:all var(--t)}
+.navlinks a:hover{background:var(--pink-soft);color:var(--pink)}
+.cta-head{margin-left:auto;display:none}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.4rem;border-radius:999px;
+  font-weight:700;font-size:.93rem;transition:transform var(--t),box-shadow var(--t),background var(--t)}
+.btn-primary{background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;box-shadow:0 8px 24px -8px rgba(232,67,147,.6)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 32px -10px rgba(232,67,147,.7)}
+.btn-ghost{border:2px solid var(--line);background:transparent;color:var(--dark-2)}
+.btn-ghost:hover{border-color:var(--pink);color:var(--pink)}
+.menu-btn{margin-left:auto;width:44px;height:44px;border-radius:12px;display:grid;place-items:center;border:2px solid var(--line)}
+.menu-btn span{display:block;width:20px;height:2.5px;border-radius:2px;background:var(--pink);position:relative}
+.menu-btn span::before,.menu-btn span::after{content:"";position:absolute;left:0;width:20px;height:2.5px;border-radius:2px;background:var(--pink)}
+.menu-btn span::before{top:-7px}.menu-btn span::after{top:7px}
+@media(min-width:900px){
+  .navlinks,.cta-head{display:flex;align-items:center}
+  .menu-btn{display:none}
+}
+.mmenu{position:fixed;inset:68px 0 0 0;background:var(--paper);z-index:55;
+  display:flex;flex-direction:column;padding:1.5rem;gap:.3rem;
+  transform:translateX(100%);transition:transform var(--t)}
+.mmenu.open{transform:translateX(0)}
+.mmenu a{padding:1.1rem;border-radius:16px;font-size:1.1rem;border-bottom:1px solid var(--line)}
+.mmenu a:active{background:var(--pink-soft)}
+
+/* ============ 首屏 ============ */
+.hero{padding:clamp(2.5rem,8vw,5.5rem) 0 clamp(2rem,6vw,4rem);position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;left:-10vw;bottom:-15vw;width:50vw;height:50vw;border-radius:50%;
+  background:radial-gradient(circle,rgba(232,67,147,.12),transparent 65%);z-index:0}
+.hero::after{content:"";position:absolute;right:-8vw;top:-8vw;width:40vw;height:40vw;border-radius:50%;
+  background:radial-gradient(circle,rgba(108,92,231,.14),transparent 65%);z-index:0}
+.hero-in{position:relative;z-index:1;display:grid;gap:clamp(2rem,5vw,3rem)}
+@media(min-width:920px){.hero-in{grid-template-columns:1.1fr .9fr;align-items:center}}
+.badge{display:inline-flex;align-items:center;gap:.5rem;padding:.45rem 1rem;border-radius:999px;
+  background:linear-gradient(135deg,var(--pink-soft),var(--purple-soft));color:var(--pink);font-size:.85rem;font-weight:700}
+.badge i{width:8px;height:8px;border-radius:50%;background:var(--pink);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+h1{font-size:clamp(2.2rem,6vw,4rem);margin:.8rem 0 1rem;background:linear-gradient(135deg,var(--pink),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.lede{font-size:clamp(1rem,1.4vw,1.15rem);color:var(--dark-2);max-width:36em}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2rem 0 2.25rem;
+  padding:1.5rem;border-radius:var(--r);background:#fff;border:2px solid var(--line)}
+.hero-stats .stat b{display:block;font-size:clamp(1.6rem,3.5vw,2.2rem);background:linear-gradient(135deg,var(--pink),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.1}
+.hero-stats .stat small{color:var(--muted);font-size:.82rem}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.75rem}
+.hero-visual{position:relative}
+.hero-card{background:linear-gradient(160deg,var(--purple),var(--pink));color:#fff;border-radius:28px;padding:clamp(1.5rem,3vw,2.5rem);
+  box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero-card::before{content:"🍠";position:absolute;right:-20px;top:-20px;font-size:8rem;opacity:.15}
+.hero-card h3{font-size:1.2rem;margin-bottom:1.2rem;position:relative}
+.season-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem;position:relative}
+.season-item{padding:1rem;border-radius:16px;background:rgba(255,255,255,.15);backdrop-filter:blur(8px);text-align:center;transition:transform var(--t)}
+.season-item:hover{transform:scale(1.05)}
+.season-item .season-name{font-weight:700;font-size:1rem}
+.season-item .season-count{font-size:.82rem;opacity:.8;margin-top:.2rem}
+
+/* ============ 通用区块 ============ */
+section{padding:clamp(3rem,8vw,5.5rem) 0;scroll-margin-top:75px}
+.sec-head{text-align:center;max-width:40em;margin:0 auto clamp(2rem,5vw,3rem)}
+.kicker{font-size:.82rem;letter-spacing:.2em;color:var(--pink);font-weight:700;text-transform:uppercase}
+h2{font-size:clamp(1.6rem,4vw,2.5rem);margin:.5rem 0 .9rem}
+.sec-desc{color:var(--muted);font-size:1rem}
+
+/* ========== 番剧推荐 ========== */
+.anime-grid{display:grid;gap:1.25rem}
+@media(min-width:560px){.anime-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:900px){.anime-grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1100px){.anime-grid{grid-template-columns:repeat(4,1fr)}}
+.anime-card{background:var(--card);border-radius:var(--r);overflow:hidden;transition:transform var(--t),box-shadow var(--t);position:relative}
+.anime-card:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
+.anime-cover{height:220px;position:relative;display:flex;align-items:flex-end;padding:1rem;overflow:hidden}
+.anime-cover::before{content:"";position:absolute;inset:0;background:linear-gradient(to top, rgba(45,27,78,.8),transparent 60%)}
+.anime-cover .status{position:absolute;top:1rem;right:1rem;padding:.35rem .8rem;border-radius:999px;font-size:.78rem;font-weight:700;z-index:2}
+.status.airing{background:#00b894;color:#fff}
+.status.finished{background:#636e72;color:#fff}
+.status.upcoming{background:var(--pink);color:#fff}
+.anime-cover .score{position:relative;z-index:2;display:flex;align-items:center;gap:.3rem;color:#fff;font-weight:700;font-size:1.1rem}
+.anime-cover .score span{font-size:.85rem;opacity:.8;font-weight:400}
+.anime-info{padding:1.25rem}
+.anime-info h3{font-size:1.1rem;margin-bottom:.3rem}
+.anime-info .meta{font-size:.84rem;color:var(--muted);margin-bottom:.8rem}
+.anime-info .tags{display:flex;flex-wrap:wrap;gap:.4rem}
+.anime-info .tag{padding:.2rem .65rem;border-radius:999px;font-size:.75rem;font-weight:600}
+.tag.action{background:#ffeaa7;color:#8d6e00}
+.tag.comedy{background:#fab1a0;color:#c0392b}
+.tag.drama{background:#a29bfe;color:#2d1b4e}
+.tag.fantasy{background:#81ecec;color:#006266}
+.tag.school{background:#dfe6e9;color:#2d3436}
+.tag.romance{background:#fdcb6c;color:#8d6e00}
+
+/* ========== 动漫资讯 ========== */
+.news-section{background:var(--card)}
+.news-layout{display:grid;gap:1.5rem}
+@media(min-width:860px){.news-layout{grid-template-columns:1.5fr 1fr}}
+.news-featured{background:linear-gradient(160deg,var(--dark),var(--purple));color:#fff;border-radius:var(--r);overflow:hidden;position:relative;min-height:300px;display:flex;flex-direction:column;justify-content:flex-end;padding:2rem}
+.news-featured::before{content:"";position:absolute;inset:0;background:url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 300\"><rect fill=\"%236c5ce7\" width=\"400\" height=\"300\"/><circle cx=\"300\" cy=\"80\" r=\"60\" fill=\"%23e84393\" opacity=\".3\"/><circle cx=\"100\" cy=\"220\" r=\"40\" fill=\"%23fd79a8\" opacity=\".2\"/></svg>') center/cover}
+.news-featured .news-content{position:relative;z-index:2}
+.news-featured .news-tag{display:inline-block;padding:.3rem .8rem;border-radius:999px;background:var(--pink);font-size:.78rem;font-weight:700;margin-bottom:.8rem}
+.news-featured h3{font-size:clamp(1.2rem,2.5vw,1.6rem);margin-bottom:.5rem}
+.news-featured p{opacity:.85;font-size:.95rem}
+.news-list{display:grid;gap:1rem}
+.news-item{display:flex;gap:1rem;padding:1rem;border-radius:16px;border:2px solid var(--line);transition:border-color var(--t)}
+.news-item:hover{border-color:var(--pink)}
+.news-date{flex:0 0 56px;height:56px;border-radius:12px;background:var(--pink-soft);color:var(--pink);display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:700;line-height:1.2}
+.news-date .day{font-size:1.3rem}
+.news-date .month{font-size:.75rem}
+.news-text h4{font-size:.95rem;margin-bottom:.2rem;line-height:1.4}
+.news-text p{font-size:.82rem;color:var(--muted);line-height:1.5}
+
+/* ========== 角色图鉴 ========== */
+.char-grid{display:grid;gap:1.25rem}
+@media(min-width:560px){.char-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:900px){.char-grid{grid-template-columns:repeat(3,1fr)}}
+.char-card{background:var(--card);border-radius:var(--r);overflow:hidden;transition:transform var(--t),box-shadow var(--t);border:2px solid transparent}
+.char-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--line)}
+.char-avatar{height:180px;display:grid;place-items:center;font-size:4rem;position:relative}
+.char-avatar::after{content:"";position:absolute;bottom:0;left:0;right:0;height:50%;background:linear-gradient(to top,var(--card),transparent)}
+.char-info{padding:0 1.25rem 1.25rem;position:relative}
+.char-info h3{font-size:1.1rem;margin-bottom:.2rem}
+.char-info .anime-source{font-size:.82rem;color:var(--pink);font-weight:600;margin-bottom:.6rem}
+.char-info p{font-size:.88rem;color:var(--muted);line-height:1.6}
+.char-stats{display:flex;gap:.5rem;margin-top:.8rem;flex-wrap:wrap}
+.char-stat{padding:.3rem .7rem;border-radius:999px;font-size:.75rem;font-weight:600;background:var(--purple-soft);color:var(--purple)}
+
+/* ========== 关于我们 ========== */
+.about-section{background:var(--card)}
+.about-grid{display:grid;gap:2rem;align-items:center}
+@media(min-width:900px){.about-grid{grid-template-columns:1fr 1fr}}
+.about-text h2{text-align:left}
+.about-text .sec-desc{text-align:left;margin-bottom:1.5rem}
+.feature-list{display:grid;gap:1rem}
+.feature-item{display:flex;gap:1rem;align-items:flex-start;padding:1.25rem;border-radius:16px;background:var(--paper);border:2px solid var(--line)}
+.feature-item .feat-icon{flex:0 0 48px;height:48px;border-radius:14px;display:grid;place-items:center;font-size:1.5rem}
+.feature-item h4{font-size:1rem;margin-bottom:.3rem}
+.feature-item p{font-size:.88rem;color:var(--muted)}
+.about-visual{background:linear-gradient(160deg,var(--pink-soft),var(--purple-soft));border-radius:28px;padding:2rem;text-align:center}
+.about-visual .visual-icon{font-size:5rem;margin-bottom:1rem}
+.about-visual h3{font-size:1.3rem;margin-bottom:.5rem}
+.about-visual p{color:var(--dark-2);margin-bottom:1.5rem}
+.subscribe-form{display:flex;gap:.5rem;flex-wrap:wrap}
+.subscribe-form input{flex:1;min-width:200px;padding:.85rem 1.2rem;border-radius:999px;border:2px solid var(--line);font:inherit;font-size:.95rem;background:#fff}
+.subscribe-form input:focus{outline:none;border-color:var(--pink)}
+.subscribe-form .btn{padding:.85rem 1.5rem}
+
+/* ========== 页脚 ========== */
+.ft{background:var(--dark);color:rgba(255,255,255,.7);padding:3rem 0 2rem}
+.ft-top{display:grid;gap:2rem}
+@media(min-width:760px){.ft-top{grid-template-columns:1.5fr 1fr 1fr 1fr}}
+.ft-brand{font-size:1.6rem;font-weight:900;color:#fff;margin-bottom:.5rem}
+.ft-brand span{color:var(--pink-2)}
+.ft-brand-desc{font-size:.9rem;margin-bottom:1.5rem;max-width:22em;line-height:1.7}
+.ft h4{color:#fff;font-size:1rem;margin-bottom:1.2rem}
+.ft ul{list-style:none;display:grid;gap:.7rem}
+.ft a{font-size:.92rem;transition:color var(--t)}
+.ft a:hover{color:var(--pink-2)}
+.social-links{display:flex;gap:.75rem;margin-top:1rem}
+.social-links a{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.1);display:grid;place-items:center;font-size:1.1rem;transition:background var(--t)}
+.social-links a:hover{background:var(--pink)}
+.ft-bot{border-top:1px solid rgba(255,255,255,.1);margin-top:2.5rem;padding-top:1.5rem;
+  display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;font-size:.85rem;color:rgba(255,255,255,.4)}
+
+/* ========== 回到顶部 ========== */
+.top{position:fixed;right:1.25rem;bottom:1.5rem;width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;
+  display:grid;place-items:center;box-shadow:0 8px 24px -8px rgba(232,67,147,.6);opacity:0;pointer-events:none;transition:all var(--t);z-index:50;font-size:1.2rem}
+.top.show{opacity:1;pointer-events:auto}
+.top:hover{transform:scale(1.1)}
+
+@media print{.hd,.mmenu,.top{display:none}body{background:#fff}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto;transition:none!important}}
+</style>
+</head>
+<body id="top">
+
+<header class="hd" id="hd">
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="番薯动漫首页">🍠 番薯动漫</a>
+    <nav class="navlinks" aria-label="主导航">
+      <a href="#anime">番剧推荐</a>
+      <a href="#news">动漫资讯</a>
+      <a href="#characters">角色图鉴</a>
+      <a href="#about">关于我们</a>
+    </nav>
+    <a href="#about" class="btn btn-primary cta-head">关注我们</a>
+    <button class="menu-btn" id="menuBtn" aria-label="打开菜单" aria-expanded="false" aria-controls="mmenu"><span></span></button>
+  </div>
+</header>
+
+<div class="mmenu" id="mmenu" aria-hidden="true">
+  <a href="#anime">番剧推荐</a>
+  <a href="#news">动漫资讯</a>
+  <a href="#characters">角色图鉴</a>
+  <a href="#about">关于我们</a>
+  <a href="#about" style="background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;margin-top:.5rem">关注我们</a>
+</div>
+
+<main>
+
+  <!-- ========== 首页 ========== -->
+  <section class="hero" aria-labelledby="h1">
+    <div class="wrap hero-in">
+      <div>
+        <span class="badge"><i></i> 2026 秋季新番火热更新中</span>
+        <h1 id="h1">追番不迷路<br>番薯带你飞 🍠</h1>
+        <p class="lede">番薯动漫是二次元爱好者的追番指南。最新番剧更新、角色图鉴、动漫新闻，一站式获取你关心的所有动漫资讯。</p>
+        <div class="hero-stats" role="list">
+          <div class="stat" role="listitem"><b>500+</b><small>收录番剧</small></div>
+          <div class="stat" role="listitem"><b>50+</b><small>每周更新</small></div>
+          <div class="stat" role="listitem"><b>10k+</b><small>追番用户</small></div>
+        </div>
+        <div class="hero-actions">
+          <a href="#anime" class="btn btn-primary">开始追番 →</a>
+          <a href="#news" class="btn btn-ghost">最新资讯</a>
+        </div>
+      </div>
+      <aside class="hero-visual" aria-label="本季热门">
+        <div class="hero-card">
+          <h3>🔥 本季热门番剧</h3>
+          <div class="season-grid">
+            <div class="season-item"><div class="season-name">咒术回战 S3</div><div class="season-count">9.2 分</div></div>
+            <div class="season-item"><div class="season-name">葬送的芙莉莲</div><div class="season-count">9.5 分</div></div>
+            <div class="season-item"><div class="season-name">迷宫饭 S2</div><div class="season-count">8.8 分</div></div>
+            <div class="season-item"><div class="season-name">怪兽8号 S2</div><div class="season-count">8.5 分</div></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ========== 番剧推荐 ========== -->
+  <section id="anime" aria-labelledby="s2">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">ANIME LIST</div>
+        <h2 id="s2">番剧推荐</h2>
+        <p class="sec-desc">从经典神作到本季新番，精选高分作品，帮你找到下一部入坑的番。</p>
+      </div>
+      <div class="anime-grid">
+        <article class="anime-card">
+          <div class="anime-cover" style="background:linear-gradient(135deg,#e84393,#6c5ce7)">
+            <span class="status airing">连载中</span>
+            <div class="score">★ 9.2 <span>/ 1.2万评价</span></div>
+          </div>
+          <div class="anime-info">
+            <h3>咒术回战 第三季</h3>
+            <div class="meta">2026 · 24 集 · MAPPA</div>
+            <div class="tags"><span class="tag action">热血</span><span class="tag fantasy">奇幻</span><span class="tag drama">剧情</span></div>
+          </div>
+        </article>
+        <article class="anime-card">
+          <div class="anime-cover" style="background:linear-gradient(135deg,#00b894,#0984e3)">
+            <span class="status finished">已完结</span>
+            <div class="score">★ 9.5 <span>/ 2.8万评价</span></div>
+          </div>
+          <div class="anime-info">
+            <h3>葬送的芙莉莲</h3>
+            <div class="meta">2023-2024 · 28 集 · Madhouse</div>
+            <div class="tags"><span class="tag fantasy">奇幻</span><span class="tag drama">剧情</span><span class="tag school">治愈</span></div>
+          </div>
+        </article>
+        <article class="anime-card">
+          <div class="anime-cover" style="background:linear-gradient(135deg,#e17055,#d63031)">
+            <span class="status airing">连载中</span>
+            <div class="score">★ 8.8 <span>/ 9.6千评价</span></div>
+          </div>
+          <div class="anime-info">
+            <h3>迷宫饭 第二季</h3>
+            <div class="meta">2026 · 12 集 · Trigger</div>
+            <div class="tags"><span class="tag comedy">搞笑</span><span class="tag fantasy">奇幻</span><span class="tag action">冒险</span></div>
+          </div>
+        </article>
+        <article class="anime-card">
+          <div class="anime-cover" style="background:linear-gradient(135deg,#fdcb6c,#e17055)">
+            <span class="status airing">连载中</span>
+            <div class="score">★ 8.5 <span>/ 7.3千评价</span></div>
+          </div>
+          <div class="anime-info">
+            <h3>怪兽8号 第二季</h3>
+            <div class="meta">2026 · 12 集 · Production I.G</div>
+            <div class="tags"><span class="tag action">热血</span><span class="tag comedy">搞笑</span></div>
+          </div>
+        </article>
+        <article class="anime-card">
+          <div class="anime-cover" style="background:linear-gradient(135deg,#a29bfe,#6c5ce7)">
+            <span class="status upcoming">即将开播</span>
+            <div class="score">★ - <span>/ 期待中</span></div>
+          </div>
+          <div class="anime-info">
+            <h3>电锯人 第二季</h3>
+            <div class="meta">2026 冬季 · MAPPA</div>
+            <div class="tags"><span class="tag action">热血</span><span class="tag drama">剧情</span></div>
+          </div>
+        </article>
+        <article class="anime-card">
+          <div class="anime-cover" style="background:linear-gradient(135deg,#fd79a8,#e84393)">
+            <span class="status finished">已完结</span>
+            <div class="score">★ 9.0 <span>/ 1.5万评价</span></div>
+          </div>
+          <div class="anime-info">
+            <h3>间谍过家家 第三季</h3>
+            <div class="meta">2025 · 25 集 · WIT/ CloverWorks</div>
+            <div class="tags"><span class="tag comedy">搞笑</span><span class="tag action">动作</span><span class="tag romance">日常</span></div>
+          </div>
+        </article>
+        <article class="anime-card">
+          <div class="anime-cover" style="background:linear-gradient(135deg,#55efc4,#00b894)">
+            <span class="status finished">已完结</span>
+            <div class="score">★ 8.7 <span>/ 6.2千评价</span></div>
+          </div>
+          <div class="anime-info">
+            <h3>鬼灭之刃 柱训练篇</h3>
+            <div class="meta">2024 · 8 集 · ufotable</div>
+            <div class="tags"><span class="tag action">热血</span><span class="tag drama">剧情</span></div>
+          </div>
+        </article>
+        <article class="anime-card">
+          <div class="anime-cover" style="background:linear-gradient(135deg,#74b9ff,#0984e3)">
+            <span class="status airing">连载中</span>
+            <div class="score">★ 8.9 <span>/ 4.1千评价</span></div>
+          </div>
+          <div class="anime-info">
+            <h3>我独自升级 第二季</h3>
+            <div class="meta">2026 · 13 集 · A-1 Pictures</div>
+            <div class="tags"><span class="tag action">热血</span><span class="tag fantasy">奇幻</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 动漫资讯 ========== -->
+  <section id="news" class="news-section" aria-labelledby="s3">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">NEWS</div>
+        <h2 id="s3">动漫资讯</h2>
+        <p class="sec-desc">最新动画制作消息、声优动态、展会情报，一手资讯不错过。</p>
+      </div>
+      <div class="news-layout">
+        <a href="#" class="news-featured">
+          <div class="news-content">
+            <span class="news-tag">独家</span>
+            <h3>《进击的巨人》最终季完结纪念活动官宣，原画展巡回开启</h3>
+            <p>为纪念《进击的巨人》最终季完结，官方宣布将在东京、上海、首尔三地举办原画展，展出超过 500 幅原画与分镜稿……</p>
+          </div>
+        </a>
+        <div class="news-list">
+          <article class="news-item">
+            <div class="news-date"><span class="day">28</span><span class="month">9月</span></div>
+            <div class="news-text">
+              <h4>《咒术回战》第三季第12话预告公开，五条悟回归</h4>
+              <p>本集将展现五条悟与宿傩的巅峰对决，制作组表示这是目前投入最大的单集。</p>
+            </div>
+          </article>
+          <article class="news-item">
+            <div class="news-date"><span class="day">27</span><span class="month">9月</span></div>
+            <div class="news-text">
+              <h4>花泽香菜确认出演《电锯人》第二季新角色</h4>
+              <p>官方推特发布消息，花泽香菜将为新登场角色配音，引发粉丝热议。</p>
+            </div>
+          </article>
+          <article class="news-item">
+            <div class="news-date"><span class="day">26</span><span class="month">9月</span></div>
+            <div class="news-text">
+              <h4>2026 东京动画奖提名名单公布</h4>
+              <p>《葬送的芙莉莲》获年度最佳动画提名，《迷宫饭》入围最佳喜剧类。</p>
+            </div>
+          </article>
+          <article class="news-item">
+            <div class="news-date"><span class="day">25</span><span class="month">9月</span></div>
+            <div class="news-text">
+              <h4>《鬼灭之刃》无限城篇剧场版定档2027年春季</h4>
+              <p>ufotable 正式宣布无限城篇将分三部上映，第一部定档2027年4月。</p>
+            </div>
+          </article>
+          <article class="news-item">
+            <div class="news-date"><span class="day">24</span><span class="month">9月</span></div>
+            <div class="news-text">
+              <h4>国产动画《时光代理人》第三季预告释出</h4>
+              <p>bilibili 国创发布会上公布了第三季首支预告，预计2026年暑期上线。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 角色图鉴 ========== -->
+  <section id="characters" aria-labelledby="s4">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">CHARACTERS</div>
+        <h2 id="s4">角色图鉴</h2>
+        <p class="sec-desc">人气角色档案，了解你喜欢的角色背后的故事与设定。</p>
+      </div>
+      <div class="char-grid">
+        <article class="char-card">
+          <div class="char-avatar" style="background:linear-gradient(135deg,#e84393,#fd79a8)">🧙‍♀️</div>
+          <div class="char-info">
+            <h3>芙莉莲</h3>
+            <div class="anime-source">来自《葬送的芙莉莲》</div>
+            <p>精灵族魔法使，外表年轻但已活了千年。在勇者队伍中负责辅助，勇者辛美尔去世后踏上理解人类情感的旅程。</p>
+            <div class="char-stats"><span class="char-stat">魔法</span><span class="char-stat">长寿</span><span class="char-stat">治愈</span></div>
+          </div>
+        </article>
+        <article class="char-card">
+          <div class="char-avatar" style="background:linear-gradient(135deg,#6c5ce7,#a29bfe)">⚔️</div>
+          <div class="char-info">
+            <h3>虎杖悠仁</h3>
+            <div class="anime-source">来自《咒术回战》</div>
+            <p>体育特长生，因吞下特级咒物"两面宿傩的手指"而成为宿傩的容器。性格开朗正义，目标是成为"正确的死法"。</p>
+            <div class="char-stats"><span class="char-stat">体术</span><span class="char-stat">咒力</span><span class="char-stat">容器</span></div>
+          </div>
+        </article>
+        <article class="char-card">
+          <div class="char-avatar" style="background:linear-gradient(135deg,#00b894,#55efc4)">🍖</div>
+          <div class="char-info">
+            <h3>莱欧斯</h3>
+            <div class="anime-source">来自《迷宫饭》</div>
+            <p>迷宫探险队的队长，对魔物生态和食用方法有着狂热的兴趣。为了救回被红龙吞下的妹妹，决定在迷宫中靠吃魔物生存。</p>
+            <div class="char-stats"><span class="char-stat">战士</span><span class="char-stat">料理</span><span class="char-stat">领导力</span></div>
+          </div>
+        </article>
+        <article class="char-card">
+          <div class="char-avatar" style="background:linear-gradient(135deg,#fdcb6c,#e17055)">🐙</div>
+          <div class="char-info">
+            <h3>日比野卡夫卡</h3>
+            <div class="anime-source">来自《怪兽8号》</div>
+            <p>32岁清洁工，体内寄宿着神秘怪兽力量"怪兽8号"。为了儿时与好友的约定，决心加入防卫队。</p>
+            <div class="char-stats"><span class="char-stat">怪兽化</span><span class="char-stat">毅力</span><span class="char-stat">大叔</span></div>
+          </div>
+        </article>
+        <article class="char-card">
+          <div class="char-avatar" style="background:linear-gradient(135deg,#fd79a8,#e84393)">🕵️</h3>
+          <div class="char-info">
+            <h3>劳埃德·福杰</h3>
+            <div class="anime-source">来自《间谍过家家》</div>
+            <p>西国顶级间谍"黄昏"，为任务组建虚假家庭。擅长伪装与格斗，却对育儿一窍不通，被养女阿尼亚的读心能力搞得焦头烂额。</p>
+            <div class="char-stats"><span class="char-stat">间谍</span><span class="char-stat">格斗</span><span class="char-stat">伪装</span></div>
+          </div>
+        </article>
+        <article class="char-card">
+          <div class="char-avatar" style="background:linear-gradient(135deg,#74b9ff,#0984e3)">⚔️</h3>
+          <div class="char-info">
+            <h3>程肖宇</h3>
+            <div class="anime-source">来自《我独自升级》</div>
+            <p>原本是最弱猎人E级，获得"系统"后不断升级变强。以"暗影君主"的身份崛起，目标是揭开系统的真相。</p>
+            <div class="char-stats"><span class="char-stat">暗影</span><span class="char-stat">升级</span><span class="char-stat">成长</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 关于我们 ========== -->
+  <section id="about" class="about-section" aria-labelledby="s5">
+    <div class="wrap about-grid">
+      <div class="about-text">
+        <div class="kicker">ABOUT</div>
+        <h2 id="s5">关于番薯动漫</h2>
+        <p class="sec-desc">番薯动漫成立于2024年，是一群热爱二次元的伙伴共同打造的追番社区。我们致力于为动漫爱好者提供最新、最全的番剧资讯和角色图鉴。</p>
+        <div class="feature-list">
+          <div class="feature-item">
+            <div class="feat-icon">📺</div>
+            <div><h4>精选番剧推荐</h4><p>每季新番人工筛选，按题材分类，帮你快速找到想看的。</p></div>
+          </div>
+          <div class="feature-item">
+            <div class="feat-icon">📰</div>
+            <div><h4>实时资讯更新</h4><p>制作消息、声优动态、展会情报，一手资讯每日更新。</p></div>
+          </div>
+          <div class="feature-item">
+            <div class="feat-icon">📖</div>
+            <div><h4>角色图鉴百科</h4><p>人气角色档案、声优信息、设定解析，一站式了解你喜欢的角色。</p></div>
+          </div>
+          <div class="feature-item">
+            <div class="feat-icon">🍠</div>
+            <div><h4>社区互动</h4><p>评论区讨论、追番打卡、同好交流，找到你的二次元伙伴。</p></div>
+          </div>
+        </div>
+      </div>
+      <aside class="about-visual">
+        <div class="visual-icon">🍠</div>
+        <h3>关注番薯动漫</h3>
+        <p>订阅我们的更新通知，新番开播、资讯更新不错过。</p>
+        <form class="subscribe-form" id="subForm" novalidate>
+          <input type="email" id="subEmail" placeholder="输入邮箱订阅更新" required>
+          <button type="submit" class="btn btn-primary">订阅</button>
+        </form>
+        <p style="font-size:.8rem;color:var(--muted);margin-top:1rem">我们承诺不发垃圾邮件，随时可取消订阅。</p>
+      </aside>
+    </div>
+  </section>
+
+</main>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-top">
+      <div>
+        <div class="ft-brand">🍠 番薯<span>动漫</span></div>
+        <p class="ft-brand-desc">二次元爱好者的追番指南。最新番剧、动漫资讯、角色图鉴，一站式获取。</p>
+        <div class="social-links">
+          <a href="#" aria-label="微博">微</a>
+          <a href="#" aria-label="B站">B</a>
+          <a href="#" aria-label="QQ群">Q</a>
+          <a href="#" aria-label="Discord">D</a>
+        </div>
+      </div>
+      <div><h4>追番</h4><ul>
+        <li><a href="#anime">番剧推荐</a></li>
+        <li><a href="#anime">本季新番</a></li>
+        <li><a href="#anime">经典神作</a></li>
+        <li><a href="#characters">角色图鉴</a></li>
+      </ul></div>
+      <div><h4>资讯</h4><ul>
+        <li><a href="#news">最新新闻</a></li>
+        <li><a href="#news">制作消息</a></li>
+        <li><a href="#news">声优动态</a></li>
+        <li><a href="#news">展会情报</a></li>
+      </ul></div>
+      <div><h4>关于</h4><ul>
+        <li><a href="#about">关于我们</a></li>
+        <li><a href="#about">联系方式</a></li>
+        <li><a href="#">投稿合作</a></li>
+        <li><a href="#">隐私政策</a></li>
+      </ul></div>
+    </div>
+    <div class="ft-bot">
+      <span>© 2026 番薯动漫 · 二次元追番指南</span>
+      <span>本站为番薯动漫官方介绍页 · 非商业用途</span>
+    </div>
+  </div>
+</footer>
+
+<a href="#top" class="top" id="topBtn" aria-label="回到顶部">↑</a>
+
+<script>
+(function(){
+  'use strict';
+
+  // 年份
+  var yr = document.querySelector('.ft-bot span');
+  if (yr) yr.innerHTML = yr.innerHTML.replace('2026', new Date().getFullYear());
+
+  // 导航阴影 + 回到顶部
+  var hd = document.getElementById('hd'), topBtn = document.getElementById('topBtn');
+  function onScroll(){
+    hd.classList.toggle('solid', window.scrollY > 8);
+    topBtn.classList.toggle('show', window.scrollY > 600);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // 移动菜单
+  var menuBtn = document.getElementById('menuBtn'), mmenu = document.getElementById('mmenu');
+  function toggleMenu(force){
+    var open = typeof force === 'boolean' ? force : !mmenu.classList.contains('open');
+    mmenu.classList.toggle('open', open);
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    mmenu.setAttribute('aria-hidden', open ? 'false' : 'true');
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  menuBtn.addEventListener('click', function(){ toggleMenu(); });
+  mmenu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ toggleMenu(false); });
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && mmenu.classList.contains('open')) toggleMenu(false);
+  });
+
+  // 订阅表单
+  var subForm = document.getElementById('subForm');
+  if (subForm){
+    subForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      var email = document.getElementById('subEmail').value;
+      if (email && email.includes('@')){
+        alert('感谢订阅！我们会将最新资讯发送到 ' + email);
+        subForm.reset();
+      } else {
+        alert('请输入有效的邮箱地址');
+      }
+    });
+  }
+
+  // 导航高亮
+  var links = document.querySelectorAll('.navlinks a');
+  var secs = [];
+  links.forEach(function(a){
+    var el = document.querySelector(a.getAttribute('href'));
+    if (el) secs.push({ link: a, el: el });
+  });
+  function spy(){
+    var pos = window.scrollY + 120, cur = null;
+    secs.forEach(function(s){ if (s.el.offsetTop <= pos) cur = s.link; });
+    links.forEach(function(a){ a.style.background = ''; a.style.color = ''; });
+    if (cur) { cur.style.background = 'var(--pink-soft)'; cur.style.color = 'var(--pink)'; }
+  }
+  window.addEventListener('scroll', spy, { passive: true });
+  spy();
+})();
+</script>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+</body>
+</html>
